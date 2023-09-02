@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import BurguerButton from "./BurguerButton";
+import { useState } from "react";
+import  styled  from "styled-components";
+import  BurguerButton  from "./BurguerButton";
 
-function Navbar() {
+
+function Navbar () {
   const [clicked, setClicked] = useState(false);
   const handleClick = () => {
     //cuando esta true lo pasa a false y vice versa
@@ -10,22 +11,32 @@ function Navbar() {
   };
   return (
     <>
-      <NavContainer>
-        <h2 className="text-2xl">
-          Navbar <span>Landing</span>
-        </h2>
-        <div className={`links ${clicked ? "active" : ""}`}>
-          <a onClick={handleClick} href="#h">Home</a>
-          <a onClick={handleClick} href="#h">Shop</a>
-          <a onClick={handleClick} href="#h">About</a>
-          <a onClick={handleClick} href="#h">Contact</a>
-          <a onClick={handleClick} href="#h">Blog</a>
-        </div>
-        <div className="burguer">
-          <BurguerButton clicked={clicked} handleClick={handleClick} />
-        </div>
-        <BgDiv className={`initial ${clicked ? 'active' : ''}`} ></BgDiv>
-      </NavContainer>
+        <NavContainer>
+          <h2 className="text-2xl">
+            Navbar <span>Landing</span>
+          </h2>
+          <div className={`links ${clicked ? "active" : ""}`}>
+            <a onClick={()=>handleClick} href="/home">
+              Home
+            </a>
+            <a onClick={()=>handleClick} href="#">
+              Shop
+            </a>
+            <a onClick={()=>handleClick} href="#">
+              About
+            </a>
+            <a onClick={()=>handleClick} href="/contact-us">
+              Contact Us
+            </a>
+            <a onClick={()=>handleClick} href="/RickAndMorty">
+              Rick and Morty Wiki
+            </a>
+          </div>
+          <div className="burguer">
+            <BurguerButton clicked={clicked} handleClick={handleClick} />
+          </div>
+          <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
+        </NavContainer>
     </>
   );
 }
@@ -39,6 +50,7 @@ const NavContainer = styled.nav`
     span {
       font-weight: bold;
     }
+    z-index: 1;
   }
   padding: 0.5rem;
   background-color: #333;
@@ -72,6 +84,7 @@ const NavContainer = styled.nav`
         color: white;
         display: inline;
       }
+      z-1index:1;
     }
   }
   .links.active {
@@ -84,6 +97,7 @@ const NavContainer = styled.nav`
     left: 0;
     right: 0;
     text-align: center;
+    z-index:1;
     a {
       font-size: 2rem;
       margin-top: 1rem;
@@ -91,6 +105,7 @@ const NavContainer = styled.nav`
     }
   }
   .burguer {
+    z-index: 1;
     @media (min-width: 768px) {
       display: none;
     }
@@ -104,7 +119,7 @@ const BgDiv = styled.div`
   left: -1000px;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   transition: all .6s ease;
 
   &.active {
@@ -113,5 +128,6 @@ const BgDiv = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+
   }
 `;
