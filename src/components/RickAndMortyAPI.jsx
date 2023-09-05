@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import styled from 'styled-components';
 
-export default function App() {
+function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [imageUrl, setImageUrl] = useState(null);
   const [error, setError] = useState(null);
@@ -51,13 +52,48 @@ export default function App() {
 
   return (
     <div className="App">
-      <img src={imageUrl} alt="Imagen de perrito aleatoria" />
-      <button onClick={randomDog}>
-        ¡Otro!{" "}
-        <span role="img" aria-label="corazón">
-          ❤️
-        </span>
-      </button>
+      <DogPic>
+        <div className="img-content">
+          <img
+            className="dogs"
+            src={imageUrl}
+            alt="Imagen de perrito aleatoria"
+          />
+
+          <button button onClick={randomDog}>
+            ¡Otro!{" "}
+            <span role="img" aria-label="corazón">
+              ❤️
+            </span>
+          </button>
+        </div>
+      </DogPic>
     </div>
   );
-}
+};
+
+export default App;
+
+const DogPic = styled.div`
+  .img-content {
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    width: 700px;
+    height: 500px; 
+  }
+
+  .dogs {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border: 1px solid;
+    padding: 5px;
+  }
+
+  button {
+    background: #28a745;
+    font-weight: 500px;
+    border: 1px solid #
+  }
+`;
