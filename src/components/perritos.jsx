@@ -36,7 +36,11 @@ function App() {
   if (isLoading) {
     return (
       <div className="App">
-        <h1>Cargando...</h1>
+        <Loading>
+          <div className="load">
+            <h1 className="loading">Cargando...</h1>
+          </div>  
+        </Loading>
       </div>
     );
   }
@@ -60,7 +64,7 @@ function App() {
             alt="Imagen de perrito aleatoria"
           />
 
-          <button button onClick={randomDog}>
+          <button className="btn-dog" button onClick={randomDog}>
             ¡Otro!{" "}
             <span role="img" aria-label="corazón">
               ❤️
@@ -79,21 +83,28 @@ const DogPic = styled.div`
     display: grid;
     justify-content: center;
     align-items:center;
-    width: 700px;
-    height: 500px; 
-  }
-
+    width: 800px;
+    height: 650px; 
+  };
   .dogs {
     width: 75%;
     height: 75%;
     object-fit: cover;
     border: 1px solid;
     padding: 5px;
-  }
-
-  button {
+  };
+  .btn-dog {
     background: #28a745;
-    font-weight: 500px;
-    border: 1px solid #
+    font-weight: bold;
+    border-radius:3rem;
+    border: 1px solid;
   }
 `;
+
+const Loading = styled.h1`
+  .load{
+    color: red;
+    font-size: 2rem;
+    font-weight:bold;
+  }
+`

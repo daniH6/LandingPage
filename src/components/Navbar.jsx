@@ -28,8 +28,8 @@ function Navbar () {
             <a onClick={()=>handleClick} href="/contact-us">
               Contact Us
             </a>
-            <a onClick={()=>handleClick} href="/RickAndMorty">
-              Rick and Morty Wiki
+            <a onClick={()=>handleClick} href="/perritos" >
+              Perritos
             </a>
           </div>
           <div className="burguer">
