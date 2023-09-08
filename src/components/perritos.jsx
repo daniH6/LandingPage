@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from 'styled-components';
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [imageUrl, setImageUrl] = useState(null);
@@ -36,10 +37,12 @@ function App() {
   if (isLoading) {
     return (
       <div className="App">
-        <Loading>
-          <div className="load">
-            <h1 className="loading">Cargando...</h1>
-          </div>  
+        <Loading >
+            <div className="load">
+              <h1 className="loading">
+                Cargando...
+              </h1>
+            </div>
         </Loading>
       </div>
     );
@@ -58,12 +61,11 @@ function App() {
     <div className="App">
       <DogPic>
         <div className="img-content">
-          <img
-            className="dogs"
-            src={imageUrl}
-            alt="Imagen de perrito aleatoria"
-          />
-
+            <img
+              className="dogs"
+              src={imageUrl}
+              alt="Imagen de perrito aleatoria"
+            />
           <button className="btn-dog" button onClick={randomDog}>
             ¡Otro!{" "}
             <span role="img" aria-label="corazón">
@@ -76,6 +78,13 @@ function App() {
   );
 };
 
+function sum() {
+  a = 10
+  b= 15
+  sum = a+b
+}
+
+console.log (sum = a+b)
 export default App;
 
 const DogPic = styled.div`
@@ -83,8 +92,8 @@ const DogPic = styled.div`
     display: grid;
     justify-content: center;
     align-items:center;
-    width: 800px;
-    height: 650px; 
+    width: 700px;
+    height: 600px; 
   };
   .dogs {
     width: 75%;
@@ -98,6 +107,7 @@ const DogPic = styled.div`
     font-weight: bold;
     border-radius:3rem;
     border: 1px solid;
+    justify-content: center;
   }
 `;
 

@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/SpaceX/Header.astro"
+import Launches from "../components/SpaceX/Launches.astro";
+console.log("astro")
+---
+
+<Layout title="SpaceX Launces">
+    <main class="bg-gray-900 min-h-screen pb-32">
+        <Header />
+        <Launches />
+    </main>
+</Layout>
+
+<style>
+    body{
+        color-scheme: dark light;
+    }
+</style>

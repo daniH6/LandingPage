@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import RickAndMortyAPI from "../components/perritos.jsx"
+import Perros from "../components/perritos.jsx"
 ---
 
 <Layout title="Rick and Morty Wiki">
@@ -11,8 +11,12 @@ import RickAndMortyAPI from "../components/perritos.jsx"
                   </h1> 
             
                   <section>
-                        <RickAndMortyAPI client:only="react" />
+                        <Perros client:only="react" />
                   </section>
             </div>
       </body>
 </Layout>
+
+<style>
+      background: dark-blue;
+</style>

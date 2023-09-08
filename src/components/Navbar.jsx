@@ -19,8 +19,8 @@ function Navbar () {
             <a onClick={()=>handleClick} href="/home">
               Home
             </a>
-            <a onClick={()=>handleClick} href="#">
-              Shop
+            <a onClick={()=>handleClick} href="/space">
+              Project Space x
             </a>
             <a onClick={()=>handleClick} href="#">
               About
@@ -50,10 +50,10 @@ const NavContainer = styled.nav`
     span {
       font-weight: bold;
     }
-    z-index: 1;
+    z-index: 20;
   }
   padding: 0.5rem;
-  background-color: #333;
+  background-color: #222;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,7 +84,7 @@ const NavContainer = styled.nav`
         color: white;
         display: inline;
       }
-      z-1index:1;
+      z-index:20;
     }
   }
   .links.active {
@@ -97,7 +97,7 @@ const NavContainer = styled.nav`
     left: 0;
     right: 0;
     text-align: center;
-    z-index:1;
+    z-index:20;
     a {
       font-size: 2rem;
       margin-top: 1rem;
@@ -105,7 +105,7 @@ const NavContainer = styled.nav`
     }
   }
   .burguer {
-    z-index: 1;
+    z-index: 20;
     @media (min-width: 768px) {
       display: none;
     }
