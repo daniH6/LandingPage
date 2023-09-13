@@ -3,20 +3,16 @@ import Layout from "../layouts/Layout.astro"
 import Perros from "../components/perritos.jsx"
 ---
 
-<Layout title="Rick and Morty Wiki">
-      <body>
+<Layout title="Doggie Pics">
+      <body class="bg-gray-900">
             <div class="display: grid justify-center align-middle">
                   <h1 class="text-center font-black text-2xl">
-                        Perritos
+                        Perritos randoms
                   </h1> 
             
-                  <section>
+                  <section class="sm:flex-col md:">
                         <Perros client:only="react" />
                   </section>
             </div>
       </body>
 </Layout>
-
-<style>
-      background: dark-blue;
-</style>

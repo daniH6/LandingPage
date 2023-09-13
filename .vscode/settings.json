@@ -11,5 +11,10 @@
         "pudimos",
         "solicitud",
         "Volver"
-    ]
+    ],
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+        "live-server-extension": true,
+        "live-preview-extension": true
+    },
+    "console-ninja.captureFunctions": true
 }

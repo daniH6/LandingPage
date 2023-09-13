@@ -78,13 +78,6 @@ function App() {
   );
 };
 
-function sum() {
-  a = 10
-  b= 15
-  sum = a+b
-}
-
-console.log (sum = a+b)
 export default App;
 
 const DogPic = styled.div`
@@ -92,7 +85,7 @@ const DogPic = styled.div`
     display: grid;
     justify-content: center;
     align-items:center;
-    width: 700px;
+    width: 400px;
     height: 600px; 
   };
   .dogs {

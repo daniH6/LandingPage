@@ -1,0 +1,21 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getLaunchBy } from '../../../services/spacex'
+
+const { id } = Astro.params
+
+console.log({ id })
+
+let launch
+if (id) {
+    launch = await getLaunchBy({ id })
+}
+
+
+console.log(launch)
+---
+<Layout title={`Lanzamiento ${id}`}>
+    <article>
+        {launch.id}
+    </article>
+</Layout>

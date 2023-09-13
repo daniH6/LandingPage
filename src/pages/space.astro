@@ -1,14 +1,19 @@
 ---
+
 import Layout from "../layouts/Layout.astro"
 import Header from "../components/SpaceX/Header.astro"
 import Launches from "../components/SpaceX/Launches.astro";
 console.log("astro")
+
 ---
 
 <Layout title="SpaceX Launces">
     <main class="bg-gray-900 min-h-screen pb-32">
         <Header />
-        <Launches />
+        <section class="p-5">
+            <p class="text-white py-5">Lanzamientos recientes</p>
+                <Launches />
+        </section>
     </main>
 </Layout>
 

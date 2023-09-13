@@ -29,7 +29,7 @@ function Navbar () {
               Contact Us
             </a>
             <a onClick={()=>handleClick} href="/perritos" >
-              Perritos
+              Doggies
             </a>
           </div>
           <div className="burguer">
